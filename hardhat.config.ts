@@ -81,6 +81,16 @@ const config: HardhatUserConfig = {
       chainId: chainIds.hardhat,
     },
     goerli: createTestnetConfig("goerli"),
+    avalanchePrivate: {
+      accounts: {
+      count: 10,
+      initialIndex: 0,
+      mnemonic,
+      path: "m/44'/60'/0'/0",
+    },
+    chainId: 5,
+    url: "URL RPC del nodo",
+  }
   },
   paths: {
     artifacts: "./artifacts",
@@ -89,7 +99,7 @@ const config: HardhatUserConfig = {
     tests: "./test",
   },
   solidity: {
-    version: "0.7.4",
+    version: "0.8.11",
     settings: {
       // https://hardhat.org/hardhat-network/#solidity-optimizer-support
       optimizer: {

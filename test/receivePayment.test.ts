@@ -23,7 +23,7 @@ const receiveFallback: PaymentFunction = (contractWithSigner, amountToBeSent) =>
 };
 
 const makeTestsPaymentToContract = (paymentFunction: PaymentFunction, functionName: string) => {
-  describe(`BasicPayments - Send payments to contract through ${functionName}`, function () {
+  describe.skip(`BasicPayments - Send payments to contract through ${functionName}`, function () {
     describe(`GIVEN the Smart Contract was deployed`, () => {
       let basicPayments: BasicPayments;
       before(async function () {

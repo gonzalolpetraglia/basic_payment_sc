@@ -9,6 +9,7 @@ export async function fixtureDeployedBasicPayments(): Promise<BasicPayments> {
   await deployments.fixture();
   const { deployer } = await getNamedAccounts();
   const basicPayments = <unknown>await ethers.getContract("BasicPayments", deployer);
+  console.log('a');
   return basicPayments as BasicPayments;
 }
 
